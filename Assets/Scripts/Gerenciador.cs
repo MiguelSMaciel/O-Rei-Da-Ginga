@@ -35,7 +35,7 @@ public class Gerenciador : MonoBehaviour
 
     public void ContinueGame()
     {
-
+        player.Reviver();
     }
     public void OnInterstatialButtonClick()
     {
