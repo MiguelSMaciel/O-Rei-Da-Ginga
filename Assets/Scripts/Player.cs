@@ -11,6 +11,11 @@ public class Player : MonoBehaviour
     public GameObject vida1;
     public GameObject vida2;
     public GameObject vida3;
+
+    public GameObject pistaRed;
+    public GameObject pistaGreen;
+    public GameObject pistaBlue;
+    public GameObject pistaPink;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +73,43 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             itens++;
         }
+        if(collision.gameObject.tag == "Red")
+        {
+            pistaRed.SetActive(true);
+        }
+        if (collision.gameObject.tag == "Green")
+        {
+            pistaGreen.SetActive(true);
+        }
+        if (collision.gameObject.tag == "Blue")
+        {
+            pistaBlue.SetActive(true);
+        }
+        if (collision.gameObject.tag == "Pink")
+        {
+            pistaPink.SetActive(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        /*
+        if (collision.gameObject.tag == "Red")
+        {
+            pistaRed.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Green")
+        {
+            pistaGreen.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Blue")
+        {
+            pistaBlue.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Pink")
+        {
+            pistaPink.SetActive(false);
+        }
+        */
     }
 
     public void Reviver()
