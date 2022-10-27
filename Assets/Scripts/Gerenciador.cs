@@ -9,6 +9,7 @@ public class Gerenciador : MonoBehaviour
     public bool JogoLigado;
     Monetization monetization;
     Player player;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,16 @@ public class Gerenciador : MonoBehaviour
         uiControl.quests.GetComponent<Button>().interactable = monetization.InterstitialIsReady();
         uiControl.continueADS.GetComponent<Button>().interactable = monetization.RewardedIsReady();
         */
+    }
+
+    public void AudioLigado()
+    {
+        audio.Play();
+    }
+
+    public void AudioDesligado()
+    {
+        audio.Pause();
     }
 
     public void ContinueGame()
