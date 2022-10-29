@@ -10,6 +10,8 @@ public class Gerenciador : MonoBehaviour
     Monetization monetization;
     Player player;
     public AudioSource audio;
+    bool audio_Ligado;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +38,8 @@ public class Gerenciador : MonoBehaviour
 
     public void AudioLigado()
     {
-        audio.Play();
-    }
-
-    public void AudioDesligado()
-    {
-        audio.Pause();
+       
+        
     }
 
     public void ContinueGame()

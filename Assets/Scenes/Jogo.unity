@@ -1552,6 +1552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JogoLigado: 0
+  audio: {fileID: 0}
 --- !u!114 &551800969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4385,7 +4386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 1486993962, guid: 70621a5cbaec58f4dbcb3054ad4ffc05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
