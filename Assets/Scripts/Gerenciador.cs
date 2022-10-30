@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class Gerenciador : MonoBehaviour
 {
     [HideInInspector]
     public bool JogoLigado;
     Monetization monetization;
     Player player;
-    public AudioSource audio;
-    bool audio_Ligado;
+
+    
+    private bool audio_Ligado;
+    [SerializeField] Image sOff;
+    [SerializeField] Image sOnn;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,7 @@ public class Gerenciador : MonoBehaviour
         Time.timeScale = 1f;
         JogoLigado = true;
         monetization = FindObjectOfType<Monetization>();
+        OnOff();
     }
 
     // Update is called once per frame
@@ -36,10 +41,33 @@ public class Gerenciador : MonoBehaviour
         */
     }
 
-    public void AudioLigado()
+    public void AudioGame()
     {
-       
-        
+        audio_Ligado = !audio_Ligado;
+        if (audio_Ligado == true)
+        {
+            AudioListener.volume = 1;
+        }
+        else
+        {
+            AudioListener.volume = 0;
+        }
+
+        OnOff();
+    }
+
+    private void OnOff()
+    {
+        if(audio_Ligado == false)
+        {
+            sOnn.enabled = true;
+            sOff.enabled = false;
+        }
+        else
+        {
+            sOnn.enabled = false;
+            sOff.enabled = true;
+        }
     }
 
     public void ContinueGame()
