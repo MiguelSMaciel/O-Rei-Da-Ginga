@@ -1186,7 +1186,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1927,6 +1927,7 @@ MonoBehaviour:
   inimigo3: {fileID: 704883399755796550, guid: fae8d45b7de1e584ea40aab28351f6bb, type: 3}
   item1: {fileID: 7184054783856815994, guid: 3b92c9f9d77784a469422137bbd45ddb, type: 3}
   tempo: 0
+  tempoSpawn: 2
 --- !u!4 &551800967
 Transform:
   m_ObjectHideFlags: 0

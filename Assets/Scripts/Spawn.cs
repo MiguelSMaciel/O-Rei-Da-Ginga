@@ -10,6 +10,7 @@ public class Spawn : MonoBehaviour
     public GameObject item1;
 
     public float tempo = 0;
+    public float tempoSpawn = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -51,9 +52,14 @@ public class Spawn : MonoBehaviour
     void Temporizador()
     {
         tempo += Time.deltaTime;
-        if(tempo > 1)
+        if(tempo > tempoSpawn)
         {
             tempo = 0;
+            tempoSpawn = tempoSpawn - 0.01f;
+            if(tempoSpawn < 0.2f)
+            {
+                tempoSpawn = 0.2f;
+            }
             float chance = Random.Range(0,10);
             if(chance <= 3)
             {
