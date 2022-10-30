@@ -7,12 +7,16 @@ public class UI_HighScore : MonoBehaviour
 {
     private Player player;
     public TMP_Text textScore;
+    public TMP_Text textScore2;
     public TMP_Text HighScore;
+    public TMP_Text HighScore2;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         HighScore.text = PlayerPrefs.GetInt("HighScore",0).ToString();
+        HighScore2.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 
     // Update is called once per frame
@@ -25,5 +29,6 @@ public class UI_HighScore : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", score);
             HighScore.text = score.ToString();
         }
+        textScore2 = textScore;
     }
 }
